@@ -57,7 +57,7 @@ ARCHITECTURE behavior OF Datapath_testbench IS
          IR : OUT  std_logic_vector(3 downto 0);
          Reset_L : IN  std_logic;
          Clock : IN  std_logic;
-         Data : INOUT  std_logic_vector(3 downto 0);
+         Data : INOUT  std_logic_vector(3 downto 0)
          --IOSEL_L : IN  std_logic;
          --MEMSEL_L : IN  std_logic;
          --R_W : IN  std_logic
@@ -114,7 +114,7 @@ BEGIN
           IR => IR,
           Reset_L => Reset_L,
           Clock => Clock,
-          Data => Data,
+          Data => Data
           --IOSEL_L => IOSEL_L,
           --MEMSEL_L => MEMSEL_L,
           --R_W => R_W
