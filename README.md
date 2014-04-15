@@ -17,7 +17,7 @@ The given ALU shell had to be modified to implement the funtionality demonstrate
 |  6 |  ADD  |  
 |  7 |  LDA  |
 
-This was accomplished using the following output logic code.
+Implementation was accomplished using the following conditional output logic code.
 ```vhdl
 Result <= (Data and Accumulator)      when (Opsel="000") else
 		           (not(Accumulator) + "0001") when (Opsel="001" )else
@@ -34,3 +34,30 @@ This code assigned the given values using data and the accumulator according to 
 ##ALU Test and Debug
 This resulted in the following waveform, which matched up with the predicted logic from the code.
 ![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/aluscreenshot.PNG)
+
+####Debugging
+Mostly I had issues with syntax (and the spelling of Data). In addition, I learned of the method that I used for ROR during in class discussions on the work days. 
+
+#Datapath Modifications
+The datapath implements the ALU and uses it in conjunction with several other essential parts of the computer such as the IR and MAR.
+
+The given shell had to be modified to conform to the given commands.
+
+|  Mnemonic |  Encoding  |
+|--:|--: |
+|  NOP |  0000 | 
+|  NEG |  0001 | 
+|  NOT |  0010 | 
+|  ROR |  0011 | 
+|  OUT |  0100 aaaa  |  
+|  IN |  0101 aaaa  |  
+|  ADDI |  0110 vvvv  |  
+|  LDAI |  0111 vvvv  |
+|  AND |  1000 aaaa aaaa | 
+|  JMP |  1001  aaaa aaaa| 
+|  JZ |  1010 aaaa aaaa | 
+|  JN |  1011 aaaa aaaa| 
+|  OR |  1100  aaaa aaaa|  
+|  STA |  1101 aaaa aaaa |  
+|  ADDD |  1110 aaaa aaaa |  
+|  LDAD |  1111 aaaa aaaa  |
