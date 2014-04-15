@@ -158,6 +158,11 @@ Essentially, the jump fintions by loading the value that is in marlo into the PC
 
 #PRISM program listing
 Essentially, the program begins by loading B and then RORing it. It then outputs the data (loading a 4) witha the operand being 3. It then does nothing (NOP). Then the ir is d, which is STA, so the program loads MARHi & MARLo because pcld is 1. Thus B0 is loaded. Then the jump to 02 occurs. 
+It is demonstrated below.
 
+![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/prisimdiagram.png)
 #Answer to question
-memory needs to be added to form a microprocessor. 
+Memory needs to be added to form a microprocessor. 
+
+#Documentation:
+Discussed above in debugging sections.
