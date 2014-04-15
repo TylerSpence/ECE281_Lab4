@@ -129,3 +129,5 @@ AlessZero <=   Accumulator(3) ;
 The datapath that was created was then implemented and run in isim using the testbench provided. Then the modified signal provided to us had to essentially be forced upon the waveform in order to have all the signals behave properly. The waveform is displayed below. 
 
 ![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/screenshotdatapath.png)
+
+In the testbench there was an extra comma and semicolon that had to be deleted for it to function appropriately. In addition, Captain Silva assited me with the logic used for the IR, MARHi, and MARLo. Also, classroom discussion facilitated me learning about the use of the & symbol in combining MARHi and MARLo. 
