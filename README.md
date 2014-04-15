@@ -151,9 +151,13 @@ At t=50ns and 80ns, pcld is 1, and accordingly the data becomes the value of wha
 
 225ns analysis:
 
+![alt taag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/jump.png)
+
+Essentially, the jump fintions by loading the value that is in marlo into the PC. Up until that point the pc increases in an increment of one. The jump causes it to jump to 2.
+
 
 #PRISM program listing
-
+Essentially, the program begins by loading B and then RORing it. It then outputs the data (loading a 4) witha the operand being 3. It then does nothing (NOP). Then the ir is d, which is STA, so the program loads MARHi & MARLo because pcld is 1. Thus B0 is loaded. Then the jump to 02 occurs. 
 
 #Answer to question
 memory needs to be added to form a microprocessor. 
