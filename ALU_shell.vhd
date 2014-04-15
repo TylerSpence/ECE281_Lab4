@@ -2,7 +2,7 @@
 --
 -- Title       : ALU
 -- Design      : ALU
--- Author      : usafa
+-- Author      : Spence
 -- Company     : usafa
 --
 -------------------------------------------------------------------------------
