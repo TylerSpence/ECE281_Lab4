@@ -140,13 +140,18 @@ The following section contains analysis of waveforms and the reverse engineering
 0-50ns analysis: Done in lab document by Captain Silva
 
 50-100ns analysis:
+
 ![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/fiftythroughundo.png)
 
 At approximately 65ns, the value of opsel becomes 3, which corresponds to ror in the ALU. The value stored in the accumulator at this time is B, which corresponds to the binary value of 1011. It is then rotated right to 1101, which corresponds to the hex value of D, which is what ends up being in the accumulator. 
 
 For this entire section addrsel is 0, meaning that the PC is going to be loaded to the data bus unless another load is triggered. When the funtion described with the accumulator is occuring, a z is output by the data in accordance with the buffer. 
 
-At t=50ns and 80ns, pcld is 1, and accordingly the data becomes 3, the value that is on the PC. At t=
+At t=50ns and 80ns, pcld is 1, and accordingly the data becomes the value of what is on the pc. At t=85ns, data becomes 3, what was previously on the ir. 
+
+225ns analysis:
+
+
 #PRISM program listing
 
 
