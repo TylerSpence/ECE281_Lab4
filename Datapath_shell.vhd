@@ -173,7 +173,7 @@ begin
 	  if (AddrSel= '1') then
 	     Addr <= MARHi & MARLo;
 
-		elsif (MARLoLd= '0') then 
+		elsif (AddrSel= '0') then 
 		   Addr <= PC;
      
 
