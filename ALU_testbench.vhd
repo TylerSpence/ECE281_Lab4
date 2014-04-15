@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
--- Company: 
--- Engineer:
+-- Company: usafa
+-- Engineer: Spence
 --
 -- Create Date:   11:40:37 07/10/2012
 -- Design Name:   
