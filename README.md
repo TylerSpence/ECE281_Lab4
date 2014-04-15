@@ -35,6 +35,7 @@ This code assigned the given values using data and the accumulator according to 
 This resulted in the following waveform, which matched up with the predicted logic from the code.
 ![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/aluscreenshot.PNG)
 
+
 ####Debugging
 Mostly I had issues with syntax (and the spelling of Data). In addition, I learned of the method that I used for ROR during in class discussions on the work days. 
 
@@ -131,3 +132,9 @@ The datapath that was created was then implemented and run in isim using the tes
 ![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/screenshotdatapath.png)
 
 In the testbench there was an extra comma and semicolon that had to be deleted for it to function appropriately. In addition, Captain Silva assited me with the logic used for the IR, MARHi, and MARLo. Also, classroom discussion facilitated me learning about the use of the & symbol in combining MARHi and MARLo. 
+
+
+#Simulation
+The following section contains analysis of waveforms and the reverse engineering of what is actually taking place. 
+
+
