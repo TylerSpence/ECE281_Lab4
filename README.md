@@ -112,3 +112,20 @@ process(AddrSel, MARHi, MARLo, PC)
 
   	end process; 
 ```
+
+The next step was to implement a tri state buffer to prevent the data from becoming a veritable mix of cool aid.
+
+```vhld
+Data <=   Accumulator       when    EnAccBuffer='1'         else    "ZZZZ"     ;
+```
+
+The last step was to implement the datapaht status signals.
+```vhdl
+AlessZero <=   Accumulator(3) ;			
+  	AeqZero <=  not Accumulator(3) or Accumulator(2) or Accumulator(1) or Accumulator(0); 
+```
+
+##Datapath Test and Debug
+The datapath that was created was then implemented and run in isim using the testbench provided. Then the modified signal provided to us had to essentially be forced upon the waveform in order to have all the signals behave properly. The waveform is displayed below. 
+
+![alt tag] (https://raw.githubusercontent.com/TylerSpence/ECE281_Lab4/master/screenshotdatapath.png)
