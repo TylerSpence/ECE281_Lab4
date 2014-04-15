@@ -2,7 +2,7 @@
 --
 -- Title       : Datapath
 -- Design      : Datapath
--- Author      : usafa
+-- Author      : Spence
 -- Company     : usafa
 --
 -------------------------------------------------------------------------------
