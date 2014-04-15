@@ -61,3 +61,54 @@ The given shell had to be modified to conform to the given commands.
 |  STA |  1101 aaaa aaaa |  
 |  ADDD |  1110 aaaa aaaa |  
 |  LDAD |  1111 aaaa aaaa  |
+
+##Coding
+The first step of making the datapath work was by first creating an instantiation of the ALU within the datapath.
+```vhdl
+Inst_ALU: ALU PORT MAP(
+		OpSel => OpSel,
+		Data => Data,
+		Accumulator => Accumulator,
+		Result => ALU_Result
+	);
+```
+Then, the IR and MAR had to be created using this general format for code.
+```vhdl
+process(IRLd, Reset_L, Clock)
+  	begin
+     if rising_edge(Clock) then
+
+
+	  if (Reset_L= '0') then
+	     IR <= "0000";
+
+		elsif (IRLd= '1') then 
+		   IR <= Data;
+     
+
+			end if;
+			end if;
+
+
+  	end process;   
+```
+
+Because the reset signal is an active low, it must be set to reset when the signal is zero.
+
+The next step was to implement the Address selector that decided whether to load data from the MAR or the PC to the address bus.
+
+```vhdl
+process(AddrSel, MARHi, MARLo, PC)
+  	begin
+       
+	  if (AddrSel= '1') then
+	     Addr <= MARHi & MARLo;
+
+		elsif (AddrSel= '0') then 
+		   Addr <= PC;
+     
+
+			end if;
+
+  	end process; 
+```
